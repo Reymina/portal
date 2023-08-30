@@ -1,0 +1,32 @@
+/* Original styles for h1 and .notif */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 120px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+  }
+  
+  .inbox {
+    background-color: #007bff;
+    border-radius: 5px;
+    width: 5%;
+    margin-left: 25px;
+    box-shadow:  0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    h1 {
+      margin-top: 100px; /* Reduce top margin for smaller screens */
+      font-size: 16px; /* Adjust font size for smaller screens */
+      padding: 7px;
+    }
+  
+    .inbox {
+      width: 15%; /* Adjust width for smaller screens */
+      margin: 10px auto; /* Center-align .notif */
+    }
+  }
+  

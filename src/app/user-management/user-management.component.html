@@ -1,0 +1,27 @@
+<div class="user-management-container">
+
+  <button *ngIf="isUserAdmin()" (click)="openAddUserDialog()" class="add-button">Add User</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.username }}</td>
+        <td>
+          <button (click)="editUser(user.id)" class="action-button edit-button">Edit</button>
+          <button (click)="deleteUser(user.id)" class="action-button delete-button">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

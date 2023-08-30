@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.main-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  width: 70%; 
+  max-width: 400px; 
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-container {
+  padding: 20px;
+}
+
+.login-container img {
+  margin-bottom: 15px;
+  height: 90px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px 30px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-container fa-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: maroon;
+}
+
+.input-container fa-icon:last-child {
+  right: 10px;
+  left: unset;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px; 
+}
+
+.btn-login,
+.btn-cancel {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 5px;
+}
+
+.btn-login {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-cancel {
+  background-color: #a90125;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-login:hover{
+  background-color: blue;
+}
+.btn-cancel:hover {
+  background-color: red;
+}
+
+.caps-lock-alert{
+  font-size: 10px;
+  color: red;
+}
+
+.forgot-password {
+  margin-top: 10px; 
+}
+
+.forgot-password a {
+  color: #007bff; 
+  text-decoration: none; 
+}
+
+.forgot-password a:hover {
+  text-decoration: underline; 
+}
+

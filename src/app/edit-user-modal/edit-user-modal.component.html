@@ -1,0 +1,14 @@
+<div>
+  <h2>Edit User</h2>
+  <form>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" [(ngModel)]="editedUser.firstName" name="firstName">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" [(ngModel)]="editedUser.lastName" name="lastName">
+    <label for="username">Username:</label>
+    <input type="text" id="username" [(ngModel)]="editedUser.username" name="username">
+
+    <button (click)="onSave()">Save Changes</button>
+    <button (click)="onCancel()">Cancel</button>
+  </form>
+</div>

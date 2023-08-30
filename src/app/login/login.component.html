@@ -1,0 +1,33 @@
+<body>
+  <app-error-modal *ngIf="loginError" [errorMessage]="errorMessage" (closeModal)="loginError = false"></app-error-modal>
+  <div class="main-container">
+    <div class="login-container">
+      <img src="/assets/login.png" alt="login">
+      <form (ngSubmit)="login()">
+        <div class="input-container">
+          <fa-icon icon="user"></fa-icon> <!-- User Icon -->
+          <input type="text" name="username" [(ngModel)]="username" required placeholder="Username">
+        </div>
+        <div class="input-container">
+          <input type="password" name="password" [(ngModel)]="password" required placeholder="Password" [type]="passwordVisible ? 'text' : 'password'">
+          <fa-icon icon="lock"></fa-icon> <!-- Lock Icon -->
+          <fa-icon icon="eye" (click)="togglePasswordVisibility()"></fa-icon> <!-- Eye Icon for Password Toggle -->
+        </div> <!-- Eye Icon for Password Toggle -->
+
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+        
+        <div class="caps-lock-alert" *ngIf="capsLockOn">
+          <p>Caps Lock is ON</p>
+        </div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn-login">Login</button>
+          <button type="button" class="btn-cancel" (click)="cancelLogin()">Cancel</button>
+        </div>
+       
+      </form>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,23 @@
+<div class="modal-overlay">
+  <div class="modal-content">
+    <h2>Add User</h2>
+    <form (ngSubmit)="submitForm()" #userForm="ngForm">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" [(ngModel)]="newUser.firstName" required>
+      <div *ngIf="userForm.submitted && userForm.controls['firstName'].invalid" class="error-message">First Name is required</div>
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" [(ngModel)]="newUser.lastName" required>
+      <div *ngIf="userForm.submitted && userForm.controls['lastName'].invalid" class="error-message">Last Name is required</div>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="newUser.username" required>
+      <div *ngIf="userForm.submitted && userForm.controls['username'].invalid" class="error-message">Username is required</div>
+
+      <div class="button-group">
+        <button type="submit" class="add-button">Add User</button>
+        <button type="button" class="cancel-button" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

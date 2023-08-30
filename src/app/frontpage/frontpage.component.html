@@ -1,0 +1,25 @@
+<body>
+  <div class="front-page-container">
+    <img src="/assets/suy.png" alt="logo">
+    <h1>SUY GROUP OF COMPANIES</h1>
+    <p>Experience our Digital Innovation Services.</p>
+    <button (click)="openLoginModal()">LOG IN</button>
+    <div class="icons">
+      <a href="##"><fa-icon icon="globe"></fa-icon></a>
+      <a href="##"><fa-icon [icon]="['fab', 'facebook']"></fa-icon></a>
+      <a href="##"><fa-icon [icon]="['fab', 'twitter']"></fa-icon></a>
+      <a href="##"><fa-icon [icon]="['fab', 'instagram']"></fa-icon></a>
+      <a href="##"><fa-icon [icon]="['fab', 'youtube']"></fa-icon></a>
+    </div>
+  </div>
+  
+  <div class="modal-overlay" *ngIf="showLoginModal">
+    <div class="login-modal">
+      <app-login (cancel)="closeLoginModal()"></app-login>
+    </div>
+  </div>
+  
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</body>

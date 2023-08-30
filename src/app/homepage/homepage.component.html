@@ -1,0 +1,28 @@
+<header *ngIf="authService.isLoggedIn()">
+    <nav>
+
+        <ul>
+        <li *ngIf="authService.isLoggedIn()" routerLinkActive="active"><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+         <li *ngIf="authService.isAdminLoggedIn()" routerLinkActive="active"><a routerLink="/user-management" >User Management</a></li>
+         <li *ngIf="authService.isLoggedIn()" routerLinkActive="active"><a routerLink="/notif" routerLinkActive="active"><i class="fas fa-bell"></i></a>
+          <li *ngIf="authService.isLoggedIn()" routerLinkActive="active"><a routerLink="/inbox" routerLinkActive="active"><i class="fas fa-envelope"></i></a>
+         <li *ngIf="authService.isLoggedIn()"><a (click)="showLogoutModal()">Log Out</a></li>
+         
+      </ul>
+    <!---<div class="logo">
+        <img src="assets/logo.png" alt="logo">
+      </div>  -->
+    </nav>
+  </header>
+  
+
+  <div class="modal-overlay" *ngIf="showLogoutConfirmation">
+    <div class="logout-modal">
+      <h2></h2>
+      <p>Are you sure you want to log out?</p>
+      <div class="modal-buttons">
+        <button (click)="logout()">Confirm</button>
+        <button (click)="cancelLogout()">Cancel</button>
+      </div>
+    </div>
+  </div>
